@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatBottomSheetRef} from '@angular/material/bottom-sheet';
 import {Section} from '../drawer/drawer.component';
 
@@ -10,26 +10,31 @@ import {Section} from '../drawer/drawer.component';
 export class BottomDrawerComponent {
   folders: Section[] = [
     {
-      name: 'Photos',
+      name: 'Home',
       updated: new Date('1/1/16'),
+      icon: 'home',
     },
     {
-      name: 'Recipes',
+      name: 'Favourite',
       updated: new Date('1/17/16'),
+      icon: 'favorite',
     },
     {
-      name: 'Work',
+      name: 'Bookmark',
       updated: new Date('1/28/16'),
+      icon: 'bookmark',
     }
   ];
   notes: Section[] = [
     {
       name: 'Vacation Itinerary',
       updated: new Date('2/20/16'),
+      icon: 'note',
     },
     {
       name: 'Kitchen Remodel',
       updated: new Date('1/18/16'),
+      icon: 'note',
     }
   ];
 
@@ -39,5 +44,4 @@ export class BottomDrawerComponent {
     this.bottomSheetRef.dismiss();
     event.preventDefault();
   }
-
 }

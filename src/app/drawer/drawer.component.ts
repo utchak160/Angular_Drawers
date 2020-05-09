@@ -6,6 +6,7 @@ import {BreakpointObserver} from '@angular/cdk/layout';
 export interface Section {
   name: string;
   updated: Date;
+  icon: string;
 }
 
 @Component({
@@ -18,26 +19,31 @@ export class DrawerComponent implements OnInit {
   isSmallScreen = this.breakpointObserver.isMatched('(max-width: 599px)');
   folders: Section[] = [
     {
-      name: 'Photos',
+      name: 'Home',
       updated: new Date('1/1/16'),
+      icon: 'home',
     },
     {
-      name: 'Recipes',
+      name: 'Favourite',
       updated: new Date('1/17/16'),
+      icon: 'favorite',
     },
     {
-      name: 'Work',
+      name: 'Bookmark',
       updated: new Date('1/28/16'),
+      icon: 'bookmark',
     }
   ];
   notes: Section[] = [
     {
       name: 'Vacation Itinerary',
       updated: new Date('2/20/16'),
+      icon: 'note',
     },
     {
       name: 'Kitchen Remodel',
       updated: new Date('1/18/16'),
+      icon: 'note',
     }
   ];
 

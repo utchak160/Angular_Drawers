@@ -3,14 +3,14 @@
     <mat-list>
       <div mat-subheader>Folders</div>
       <mat-list-item *ngFor="let folder of folders">
-        <mat-icon mat-list-icon>folder</mat-icon>
+        <mat-icon mat-list-icon>{{ folder.icon }}</mat-icon>
         <div mat-line>{{folder.name}}</div>
         <div mat-line> {{folder.updated | date}} </div>
       </mat-list-item>
       <mat-divider></mat-divider>
       <div mat-subheader>Notes</div>
       <mat-list-item *ngFor="let note of notes">
-        <mat-icon mat-list-icon>note</mat-icon>
+        <mat-icon mat-list-icon>{{ note.icon }}</mat-icon>
         <div mat-line>{{note.name}}</div>
         <div mat-line> {{note.updated | date}} </div>
       </mat-list-item>
@@ -26,6 +26,5 @@
 </mat-sidenav-container>
 
 <ng-container *ngIf="isSmallScreen">
-
   <button mat-mini-fab color="primary" (click)="openBottomSheet()"><mat-icon>menu</mat-icon></button>
 </ng-container>
